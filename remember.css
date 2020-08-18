@@ -1,0 +1,255 @@
+body {
+    background-color: #161616;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    margin: 0;
+    transition: 0.5s;
+}   
+
+/* styling for light theme body */
+body.light {
+    background-color: #f4f5f6;
+    transition: 0.5s;
+}
+
+button:hover, button:focus, .close:hover, .close:focus  {
+    cursor: pointer;
+}
+
+header {
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.8em;
+}
+
+header button {
+    background-color: #161616;
+    margin-left: 12px;
+    margin-right: 10px;
+    font-family: 'Bad Script', cursive;
+    font-size: 1.2em;
+    color: #D8DDDE;
+    border-bottom: solid 1px #D8DDDE;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    transition: 0.5s;
+    outline: none;
+}
+
+/* styling for light theme button */
+.light header button {
+    background-color: #f4f5f6;
+    color: #21384c;
+    border-bottom: solid 1px #21384c;
+    border-left: none;
+    border-right: none;
+    border-top: none; 
+    transition: 0.5s;
+}
+
+.flex-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.flex-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.vid-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+video {
+    width: 1260px;
+    height: 700px;
+}
+
+.generator-wrapper { 
+    position: absolute;
+    top: 300px; 
+    left: 20px; 
+}
+  
+.generator-wrapper span {
+    display: none;
+    color: #D8DDDE;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    min-width: 0px;
+}   
+
+/* small laptop resolution */
+@media only screen and (max-width: 1280px) {
+    video {
+        width: 800px;
+        height: 480px;
+    }
+
+    .generator-wrapper span {
+        font-size: 0.9em;
+    }
+
+    .vid-container {
+        margin-bottom: 0;
+    }
+}
+
+.modalBtn {
+    padding: 0;
+    height: 40px;
+    width: 180px;
+    margin-top: 10px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    background-color: #161616;
+    color: #D8DDDE;
+    border-top: solid 3px #D8DDDE;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    transition: 0.5s;
+    outline: none;
+}
+
+@media only screen and (max-width: 1280px) {
+    .modalBtn, .light .modalBtn {
+        font-size: 1em;
+        border-top: 1px solid #D8DDDE;
+    }
+}
+
+/* styling for light theme modal popups */
+.light .modalBtn {
+
+    color:#21384c;
+    background-color: #f4f5f6;
+    border-top: solid 3px #21384c;
+    border-left: none;
+    border-right: none;
+    border-bottom: none; 
+    transition: 0.5s;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: none; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.6);
+}
+  
+.modal-content {
+background-color:rgba(216, 221, 222, 0.8);
+margin: 15% auto;
+padding: 20px;
+width: 40%; 
+border-top: 5px solid #3a5e6b;
+border-left: 0px;
+border-bottom: 5px solid #3a5e6b;
+border-right: 0px;
+text-align: center;
+font-weight: 200;
+color: black;
+overflow: auto;
+}
+
+/* small laptop resolution */
+@media only screen and (max-width: 1280px) {
+    .modal-content {
+        margin: 10% auto;
+    }
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+    padding: 2px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+li a:hover {
+    background-color: #8a6c7c;
+    color: black;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+.social-icons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icons img {
+    height: 40px;
+    padding: 10px;
+}
+  
+.close {
+color: #21384c;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover, .close:focus {
+color: #3a5e6b;
+text-decoration: none;
+}
+
+/* styling for the entry modal popup */
+.entryModal {
+    display: show;
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+.entry-modal-content {
+    background-color:rgba(216, 221, 222, 0.8);
+    margin: 15% auto;
+    padding: 20px;
+    width: 40%; 
+    border-top: 5px solid #3a5e6b;
+    border-left: 0px;
+    border-bottom: 5px solid #3a5e6b;
+    border-right: 0px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: black;
+}
+
